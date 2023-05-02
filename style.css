@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* this is simple framwork*/
+/*this framwork to make elements in th center of th continer using flex*/
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* this class th*o center any child in its parent by position */
+.center_position{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*this class to make the width , height = 100px and make this element circle*/
+.circle_100{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+/*this class to make the width , height = 200px and make this element circle*/
+.circle_100{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+body{
+    padding: 15px;
+}
+.arrow{
+    background-color: #eee;
+    padding: 25px;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 50px auto;
+    position: relative;
+    width: 400px;
+}
+.top::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    width: 0px;
+    height: 0px;
+    border-width: 25px;
+    transform: translate(-50%,-50%);
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+}
+.right::before{
+    content: "";
+    position: absolute;
+    left: calc(100% + 25px);
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent transparent transparent #eee;
+}
+.bottom::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top:calc(100% + 25px);
+    width: 0px;
+    height: 0px;
+    border-width: 25px;
+    transform: translate(-50%,-50%);
+    border-style: solid;
+    border-color: #eee transparent transparent transparent;
+}
+.left::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translate(-50%,-50%);
+    width: 0px;
+    height: 0px;
+    border-width: 25px;
+    border-style: solid;
+    border-color: transparent #eee transparent transparent;
+}
